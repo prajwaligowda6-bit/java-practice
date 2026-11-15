@@ -1,0 +1,8 @@
+class Solution {
+    public int countMatches(List<List<String>> items, String ruleKey, String ruleValue) {
+        int k = ruleKey.equals("type") ? 0 : ruleKey.equals("color") ? 1 : 2, c = 0;
+        for(List<String> i : items)
+            if(i.get(k).equals(ruleValue)) c++;
+        return c;
+    }
+}
